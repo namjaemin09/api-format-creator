@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default_layout}">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+    <!--    <link rel="stylesheet" th:href="@{/css/page/home.css}" >-->
+</th:block>
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+    <!--    <script th:src="@{/js/page/home.js}"></script>-->
+</th:block>
+
+<!-- Content -->
+<div layout:fragment="content">
+    <h1>Content</h1>
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>이름</th>
+            <th>참가 인원</th>
+            <th>시작</th>
+            <th>종료</th>
+            <th>index 내용</th>
+        </tr>
+        <tr th:each="event , index: ${events}">
+            <td th:text="${index.index}">#</td>
+            <td th:text="${event.name}">이벤트 이름</td>
+            <td th:text="${event.limitOfEnrollment}">100</td>
+            <td th:text="${event.startDateTime}">2019년 1월 10일 오전 10시</td>
+            <td th:text="${event.endDateTime}">2019년 1월 10일 오전 12시</td>
+            <td th:text="${index}">index</td>
+        </tr>
+    </table>
+    출처: https://minaminaworld.tistory.com/162 [미나미 블로그:티스토리]
+</div>
+
+</html>
