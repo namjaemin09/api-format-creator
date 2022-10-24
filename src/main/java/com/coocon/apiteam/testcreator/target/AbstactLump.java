@@ -1,8 +1,11 @@
 package com.coocon.apiteam.testcreator.target;
 
-public class AbstactLump {
+import java.util.Map;
+
+abstract class AbstactLump {
     private String name;
 
+    private Map<String, AbstactLump> subRule;
 
 
 }
