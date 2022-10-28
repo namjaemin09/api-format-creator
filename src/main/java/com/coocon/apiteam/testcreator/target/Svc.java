@@ -4,10 +4,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Setter
 @Getter
+@Setter
 @NoArgsConstructor
-public class Ido extends Lump{
-    private String startTime;
-    private String endTime;
+public class Svc extends Lump{
+
+    private String packageId;
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default_layout}">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+  <!--    <link rel="stylesheet" th:href="@{/css/page/home.css}" >-->
+  <link rel="stylesheet" th:href="@{/css/table.css}">
+</th:block>
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+  <script th:src="@{/js/simulator.js}"></script>
+</th:block>
+
+<!-- Content -->
+<head>
+  <meta charset="UTF-8">
+  <title>APITEAM-parser</title>
+</head>
+<div layout:fragment="content">
+  <h3>Content</h3>
+  <button>기본</button>
+
+</div>
+
+</html>

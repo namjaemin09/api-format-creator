@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jex>
+    <id>CERT_PASS_EVD_REQ</id>
+    <name><![CDATA[(인증서/PASS) 간편증빙 서비스]]></name>
+    <version>20210901112734</version>
+    <pkg></pkg>
+    <target>PASS_CERTIFICATE</target>
+    <ext>
+        <_IMO_APPEND_URL>/v1/certification/notice</_IMO_APPEND_URL>
+    </ext>
+    <tmUseYn><![CDATA[N]]></tmUseYn>
+    <strTm><![CDATA[000000]]></strTm>
+    <endTm><![CDATA[240000]]></endTm>
+    <holStrTm><![CDATA[]]></holStrTm>
+    <holEndTm><![CDATA[]]></holEndTm>
+    <satStrTm><![CDATA[]]></satStrTm>
+    <satEndTm><![CDATA[]]></satEndTm>
+    <sunStrTm><![CDATA[]]></sunStrTm>
+    <sunEndTm><![CDATA[]]></sunEndTm>
+    <svcTmMsgCd></svcTmMsgCd>
+    <rule>
+        <in>
+            <item padding=" " length="5" name="이용기관 코드(외부용)" id="companyCd" fullChar="N" required="Y"  />
+            <item padding=" " length="2" name="대행사 코드(쿠콘 코드)" id="agencyCd" fullChar="N"  />
+            <item padding=" " length="5" name="서비스타입코드" id="serviceTycd" fullChar="N" required="Y"  />
+            <item padding=" " length="40" name="휴대번호" id="phoneNo" fullChar="N" required="Y"  />
+            <item padding=" " length="300" name="사용자명" id="userNm" fullChar="N" required="Y"  />
+            <item padding=" " length="40" name="사용자 생일" id="birthday" fullChar="N"  />
+            <item padding=" " length="40" name="사용자 성별" id="gender" fullChar="N"  />
+            <item padding=" " length="200" name="사용자 연계정보 " id="CI" fullChar="N"  />
+            <item padding=" " length="50" name="인증요청 알림 제목" id="reqTitle" fullChar="N" required="Y"  />
+            <item padding=" " length="500" name="인증요청 알림 내용" id="reqContent" fullChar="N" required="Y"  />
+            <item padding=" " length="12" name="인증요청측 이용기관 연락처" id="reqCSPhoneNo" fullChar="N" required="Y"  />
+            <item padding=" " length="20" name="인증요청 만료일시" id="reqEndDttm" fullChar="N" required="Y"  />
+            <item padding=" " length="1" name="알림내용 통지여부" id="isNotification" fullChar="N"  />
+            <item padding=" " defaultValue="Y" length="1" name="알림내용 통지여부" id="isUseTss" fullChar="N"  />
+            <item padding=" " length="1" name="시점확인 서비스 사용여부" id="isPASSVerify" fullChar="N"  />
+            <item padding=" " length="1" name="서명대상 유형코드" id="signTargetTycd" fullChar="N" required="Y"  />
+            <item padding=" " length="1000" name="서명대상정보" id="signTarget" fullChar="N" required="Y"  />
+            <item padding=" " length="1" name="사용자동의여부" id="isUserAgreement" fullChar="N"  />
+            <item padding=" " length="20" name="이용기관측 거래번호" id="reqTxId" fullChar="N"  />
+            <item padding=" " length="1" name="원본 조회 URL" id="isDigitalSign" fullChar="N"  />
+            <item padding=" " length="1" name="전자서명값 포함여부" id="isCombineAuth" fullChar="N"  />
+            <item resource="originalInfo" name="originalInfo" id="originalInfo" fullChar="N" type="GROUP"  />
+            <item padding=" " length="1" name="통신사코드" id="telcoTycd" fullChar="N"  />
+        </in>
+        <out>
+            <item padding=" " length="5" name="이용기관측 거래번호" id="reqTxId" fullChar="N" required="Y"  />
+            <item padding=" " length="20" name="패스플랫폼측 거래번호" id="certTxId" fullChar="N" required="Y"  />
+            <item padding="0" length="4" name="에러 코드" id="errorCd" typeDat="9" fullChar="N" align="RIGHT"  />
+            <item padding=" " length="100" name="에러 메시지" id="errorMessage" fullChar="N"  />
+            <item padding=" " length="5" name="에러 발생 지점 코드" id="errorPointCd" fullChar="N"  />
+        </out>
+        <subRule>
+            <rule_Sub_0 id="originalInfo"  type="GROUP">
+                <item padding=" " length="1" name="원본포멧코드" id="originalFormatCd" fullChar="N"  />
+                <item padding=" " length="2" name="원본 유형 코드" id="originalTycd" fullChar="N"  />
+                <item padding=" " length="100" name="원본URL" id="originalURL" fullChar="N"  />
+            </rule_Sub_0>
+        </subRule>
+    </rule>
+    <hash>c/hLvr33Q1q1tOFyvb8t4w==</hash>
+</jex>

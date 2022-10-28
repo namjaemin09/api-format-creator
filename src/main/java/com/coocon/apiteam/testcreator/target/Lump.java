@@ -7,7 +7,5 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
-public class Ido extends Lump{
-    private String startTime;
-    private String endTime;
+public class Lump extends AbstractLump {
 }

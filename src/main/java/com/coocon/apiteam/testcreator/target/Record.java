@@ -1,4 +1,13 @@
 package com.coocon.apiteam.testcreator.target;
 
-public class Record extends AbstactLump {
+import lombok.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@Builder
+@AllArgsConstructor
+public class Record extends Lump{
+    private String resource;
+    private String target;
 }

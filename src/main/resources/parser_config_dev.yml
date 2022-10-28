@@ -1,0 +1,6 @@
+file_base_path:
+  imo: ./target_sample/imo
+  svc: ./target_sample/svc
+  ido: ./target_sample/ido
+  cmo: ./target_sample/cmo
+  wsvc: ./target_sample/wsvc

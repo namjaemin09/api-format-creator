@@ -1,6 +1,7 @@
 package com.coocon.apiteam.testcreator.service;
 
 import com.coocon.apiteam.testcreator.converter.XmlToJsonConverter;
+import com.coocon.apiteam.testcreator.util.JsonBeautify;
 import groovy.util.logging.Slf4j;
 import org.junit.jupiter.api.Test;
 
@@ -18,7 +19,8 @@ class AoaParseServiceTest {
 
         AoaParseService aoaParseService = new AoaParseService();
 
-        System.out.println(aoaParseService.getJSONTargetData(basePath+fileName));
+
+        System.out.println(JsonBeautify.getBeaurifyJson(aoaParseService.getJSONTargetData(basePath+fileName)));
 
     }
 

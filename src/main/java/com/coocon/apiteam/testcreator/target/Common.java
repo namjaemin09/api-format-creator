@@ -1,4 +1,7 @@
 package com.coocon.apiteam.testcreator.target;
 
-public class Common extends AbstactLump {
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+public class Common extends Lump {
 }

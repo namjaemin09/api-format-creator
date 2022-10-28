@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jex>
+    <id>COMMON</id>
+    <name><![CDATA[대출한도 금리조회 공통부]]></name>
+    <version>20220603163947</version>
+    <pkg></pkg>
+
+    <ext>
+    </ext>
+    <tmUseYn><![CDATA[]]></tmUseYn>
+    <strTm><![CDATA[]]></strTm>
+    <endTm><![CDATA[]]></endTm>
+    <holStrTm><![CDATA[]]></holStrTm>
+    <holEndTm><![CDATA[]]></holEndTm>
+    <satStrTm><![CDATA[]]></satStrTm>
+    <satEndTm><![CDATA[]]></satEndTm>
+    <sunStrTm><![CDATA[]]></sunStrTm>
+    <sunEndTm><![CDATA[]]></sunEndTm>
+    <svcTmMsgCd></svcTmMsgCd>
+    <rule>
+        <in>
+            <item padding=" " length="6" name="전문길이" id="MsgLen" fullChar="N"  />
+            <item padding=" " length="20" name="인증키" id="FintechIsatk" fullChar="N"  />
+            <item padding=" " length="6" name="기관코드" id="FintechIscd" fullChar="N"  />
+            <item padding=" " length="3" name="핀테크 앱 일련번호" id="FintechApsno" fullChar="N"  />
+            <item padding=" " length="100" name="API명" id="ApiNm" fullChar="N"  />
+            <item padding=" " length="20" name="API 서비스코드" id="ApiSvcCd" fullChar="N"  />
+            <item padding=" " length="2" name="금융기관구분코드" id="FisDscd" fullChar="N"  />
+            <item padding=" " length="3" name="금융기관코드" id="FisCd" fullChar="N"  />
+            <item padding=" " length="8" name="전송일자" id="Tsymd" fullChar="N"  />
+            <item padding=" " length="6" name="전송시간" id="Trtm" fullChar="N"  />
+            <item padding=" " length="20" name="기관 거래고유번호" id="IsTuno" fullChar="N"  />
+            <item padding=" " length="5" name="응답코드" id="Rpcd" fullChar="N"  />
+            <item padding=" " length="100" name="응답메시지" id="Rsms " fullChar="N"  />
+            <item padding=" " length="100" name="응답URL" id="RtnUrl" fullChar="N"  />
+            <item padding=" " length="1" name="비동기여부" id="AsyncYn" fullChar="N"  />
+            <item padding=" " length="16" name="IP 정보" id="IpInfo" fullChar="N"  />
+            <item padding=" " length="3" name="마케팅 채널 구분코드" id="FintechMarkChnlCd" fullChar="N"  />
+            <item padding=" " length="81" name="FILLER" id="FillerC" fullChar="N"  />
+        </in>
+        <out>
+        </out>
+        <subRule>
+        </subRule>
+    </rule>
+    <hash>mQhFyHQ2aU3CTVtJfp7KeA==</hash>
+</jex>

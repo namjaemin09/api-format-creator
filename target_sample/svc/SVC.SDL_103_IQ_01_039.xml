@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jex>
+    <id><![CDATA[SDL_103_IQ_01_039]]></id>
+    <class><![CDATA[SDL_103_IQ_01_039]]></class>
+    <pkg><![CDATA[knbank.convloan]]></pkg>
+    <name><![CDATA[대출신청접수_경남은행]]></name>
+    <useYn>Y</useYn>
+    <useYnMsgCd></useYnMsgCd>
+    <maxUse>0</maxUse>
+    <trTp><![CDATA[U]]></trTp>
+    <mntLogYn><![CDATA[Y]]></mntLogYn>
+    <logLv><![CDATA[]]></logLv>
+    <tmUseYn><![CDATA[N]]></tmUseYn>
+    <strTm><![CDATA[000000]]></strTm>
+    <endTm><![CDATA[240000]]></endTm>
+    <holStrTm><![CDATA[]]></holStrTm>
+    <holEndTm><![CDATA[]]></holEndTm>
+    <satStrTm><![CDATA[]]></satStrTm>
+    <satEndTm><![CDATA[]]></satEndTm>
+    <sunStrTm><![CDATA[]]></sunStrTm>
+    <sunEndTm><![CDATA[]]></sunEndTm>
+    <svcTmMsgCd></svcTmMsgCd>
+    <date><![CDATA[20220617091233]]></date>
+    <ext>
+    </ext>
+
+    <rule>
+        <in>
+            <item resource="COMMON" name="API Header 공통부 CMO" id="COMMON" fullChar="N" type="COMMON"  />
+            <item padding=" " length="14" name="대출신청번호" id="LoReqtNo" fullChar="N"  />
+            <item padding=" " length="20" name="핀테크기관 관리번호" id="FinEnMnNo" fullChar="N"  />
+            <item padding=" " length="16" name="대출상품코드" id="LoPrdCd" fullChar="N"  />
+            <item padding=" " length="44" name="고객휴대폰번호" id="CstmClPN" fullChar="N"  />
+            <item padding=" " length="152" name="고객이메일주소" id="CstmEml " fullChar="N"  />
+            <item padding=" " length="152" name="고객명" id="CstmNm" fullChar="N"  />
+            <item padding=" " length="200" name="공란" id="Blank1" fullChar="N"  />
+            <item padding=" " length="500" name="예비필드" id="FillerI" fullChar="N"  />
+        </in>
+        <out>
+            <item resource="COMMON" name="API Header 공통부 CMO" id="COMMON" fullChar="N" type="COMMON"  />
+            <item padding=" " length="14" name="대출신청번호" id="LoReqtNo" fullChar="N"  />
+            <item padding=" " length="20" name="핀테크기관 관리번호" id="FinEnMnNo" fullChar="N"  />
+            <item padding=" " length="16" name="대출상품코드" id="LoPrdCd" fullChar="N"  />
+            <item padding=" " length="200" name="브릿지페이지 URL" id="BrpgUrl" fullChar="N"  />
+            <item padding=" " length="20" name="콜백전화번호" id="CbTelNo" fullChar="N"  />
+            <item padding=" " length="200" name="공란" id="Blank1" fullChar="N"  />
+            <item padding=" " length="500" name="예비필드" id="FillerI" fullChar="N"  />
+        </out>
+        <subRule>
+        </subRule>
+    </rule>
+    <hash>0WHF7iq7rEOFWLWXAMzujg==</hash>
+</jex>
