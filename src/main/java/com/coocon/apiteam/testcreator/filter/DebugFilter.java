@@ -44,7 +44,6 @@ public class DebugFilter implements Filter {
                         log.debug("key : value [{} : {}]",header, req.getHeader(header))
         );
 
-        log.info("#####################################",req.getRequestURI());
         chain.doFilter(request, response);
         log.info("###### HTTP RESPONSE OUTPUT status {} ######", res.getStatus());
     }
