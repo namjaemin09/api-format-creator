@@ -60,6 +60,10 @@
                <td id="currentFile"></td>
            </tr>
            <tr>
+               <td>기능</td>
+               <td></td>
+           </tr>
+           <tr>
                <td>TCP 데이터</td>
                <td><textarea id="tcpData" name="tcpData" style="width:100%;" rows="20"></textarea></td>
            </tr>
@@ -70,7 +74,6 @@
         </tbody>
 
     </table>
-
 
     <table class = 'content_table_basic'>
         <thead>
@@ -83,7 +86,6 @@
                 <th>내용</th>
             </tr>
         </thead>
-
         <tbody>
             <tr th:if="${data} != null" th:each="detail, index : ${data}">
                 <td th:text="${detail.index}">#</td>
@@ -94,8 +96,6 @@
                 <td th:text="${detail}">index</td>
             </tr>
         </tbody>
-
-
     </table>
 </div>
 

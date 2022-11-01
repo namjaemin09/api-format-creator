@@ -59,7 +59,7 @@ public class JexXmlFilerParser {
             Lump lump = createLump(LumpTypeEnum.valueOf(type));
 
             if(inputNodeList != null){
-                inputNodeList.item(0).
+
             }
 
             if(outputNodeList != null){
