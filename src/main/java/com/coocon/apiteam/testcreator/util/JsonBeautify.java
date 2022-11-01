@@ -8,11 +8,11 @@ import org.json.JSONObject;
 
 public class JsonBeautify {
 
-    public static String getBeaurifyJson(JSONObject jsonObject){
-        return getBeaurifyJson(jsonObject.toString());
+    public static String getBeautifyJson(JSONObject jsonObject){
+        return getBeautifyJson(jsonObject.toString());
     }
 
-    public static String getBeaurifyJson(String string){
+    public static String getBeautifyJson(String string){
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         JsonElement je = JsonParser.parseString(string);
         return gson.toJson(je);

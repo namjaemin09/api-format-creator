@@ -1,6 +1,9 @@
 package com.coocon.apiteam.testcreator.converter;
 
+import com.coocon.apiteam.testcreator.util.XPathUtil;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -10,15 +13,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class XmlToJsonConverterTest {
 
+    @InjectMocks
+    XPathUtil xPathUtil;
     @Test
     public void convert_xml_to_json () {
         String basePath = "";
         String fileName = "";
 
-        XmlToJsonConverter xmlToJsonConverter = new XmlToJsonConverter();
 
         try {
-            xmlToJsonConverter.xmlToJson(new File(basePath+fileName));
+            xPathUtil.xmlToJson(new File(basePath+fileName));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -29,9 +33,8 @@ class XmlToJsonConverterTest {
         String basePath = "";
         String fileName = "";
 
-        XmlToJsonConverter xmlToJsonConverter = new XmlToJsonConverter();
         assertThrows(FileNotFoundException.class, ()->{
-            xmlToJsonConverter.xmlToJson(new File(basePath+fileName));
+            xPathUtil.xmlToJson(new File(basePath+fileName));
         });
     }
 }
