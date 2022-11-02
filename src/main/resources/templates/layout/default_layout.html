@@ -6,10 +6,13 @@
   <meta charset="UTF-8" />
   <title>thymeleaf layout</title>
   <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
-  <!-- content script -->
+  <link rel="stylesheet" th:href="@{/css/base.css}">
+  <link rel="stylesheet" th:href="@{/css/component.css}">
   <link rel="stylesheet" th:href="@{/css/table.css}">
   <link rel="stylesheet" th:href="@{/css/button.css}">
   <link rel="stylesheet" th:href="@{/css/footer.css}">
+   <script th:src="@{/js/jquery-3.6.1.min.js}"></script>
+  <!-- content script -->
   <th:block layout:fragment="css"> </th:block>
   <!-- content script -->
   <th:block layout:fragment="script"></th:block>

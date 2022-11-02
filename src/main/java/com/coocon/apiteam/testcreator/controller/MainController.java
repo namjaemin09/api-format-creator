@@ -1,6 +1,7 @@
 package com.coocon.apiteam.testcreator.controller;
 
 
+import com.coocon.apiteam.testcreator.configuration.TargetFileConfiguration;
 import com.coocon.apiteam.testcreator.service.AoaParseService;
 import com.coocon.apiteam.testcreator.service.AoaTargetService;
 
@@ -12,6 +13,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+
 @Controller
 @RequiredArgsConstructor
 @Slf4j
@@ -19,7 +23,7 @@ public class MainController {
 
     private final AoaParseService aoaParseService;
     private final AoaTargetService aoaTargetService;
-
+    private final TargetFileConfiguration targetFileConfiguration;
 
     @GetMapping("/main")
     public String mainPage(Model model){
@@ -28,15 +32,22 @@ public class MainController {
     }
 
     @GetMapping("/parser")
-    public String parserPage(Model model){;
+    public String parserPage(Model model){
 
-        model.addAttribute("test","test 입니다~!");
-        model.addAttribute("IMO_LIST","test 입니다~!");
-        model.addAttribute("SVC_LIST","test 입니다~!");
-        model.addAttribute("BCS_LIST","test 입니다~!");
-        model.addAttribute("WSVC_LIST","test 입니다~!");
+        File idoDirectory = new File(targetFileConfiguration.getIdoPath());
+        File imoDirectory = new File(targetFileConfiguration.getImoPath());
+        File svcDirectory = new File(targetFileConfiguration.getSvcPath());
+        File wsvcDirectory = new File(targetFileConfiguration.getWsvcPath());
+        File bcsDirectory = new File(targetFileConfiguration.getBcsPath());
+        File cmoDirectory = new File(targetFileConfiguration.getBcsPath());
 
-        return "parser";
+        model.addAttribute("IDO_LIST",idoDirectory.list());
+        model.addAttribute("IMO_LIST",imoDirectory.list());
+        model.addAttribute("SVC_LIST",svcDirectory.list());
+        model.addAttribute("BCS_LIST",wsvcDirectory.list());
+        model.addAttribute("WSVC_LIST",bcsDirectory.list());
+        model.addAttribute("CMO_LIST",cmoDirectory.list());
+        return "parserMain";
     }
 
     @GetMapping("/beans")

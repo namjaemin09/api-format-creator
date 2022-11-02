@@ -26,10 +26,11 @@ public class TargetFileConfiguration {
     @Value("${file_base_path.wsvc}")
     private String wsvcPath;
     */
-    private String imoPath = "./target_sample/imo";
-    private String svcPath = "./target_sample/svc";
-    private String idoPath = "./target_sample/ido";
-    private String cmoPath = "./target_sample/cmo";
-    private String wsvcPath = "./target_sample/wsvc";
+    private String imoPath = "./target_sample/imo/";
+    private String svcPath = "./target_sample/svc/";
+    private String idoPath = "./target_sample/ido/";
+    private String cmoPath = "./target_sample/cmo/";
+    private String wsvcPath = "./target_sample/wsvc/";
+    private String bcsPath = "./target_sample/bcs/";
 
 }

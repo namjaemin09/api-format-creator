@@ -58,4 +58,9 @@ class TargetFileConfigurationTest {
         assertNotNull(aoaParseService.getJSONTargetData("./target_sample/CMO.COMMON.xml"));
 
     }
+
+    @Test
+    public void get_file_list(){
+        System.out.println();
+    }
 }
