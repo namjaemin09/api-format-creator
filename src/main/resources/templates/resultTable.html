@@ -18,8 +18,8 @@
   <meta charset="UTF-8">
   <title>APITEAM-parser</title>
 </head>
-<div layout:fragment="content">
-
+<div layout:fragment="content" id='wrapper'>
+  <h1 id="fileName">fi<span th:text="${param.file}"></span></h1>
   <blockquote>
     <p>구분</p>
     <p>C : 문자열, N : 숫자, O : OBJECT(GROUP), R : ARRAY(RECORD)</p>

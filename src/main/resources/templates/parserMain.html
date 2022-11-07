@@ -11,7 +11,7 @@
 <!-- index.html 고유 스크립트 추가 -->
 <th:block layout:fragment="script">
     <!--    <script th:src="@{/js/page/home.js}"></script>-->
-    <script th:src="@{/js/parser.js}"></script>
+    <script th:src="@{/js/parserMain.js}"></script>
 </th:block>
 
 <!-- Content -->
@@ -24,69 +24,78 @@
 
     <table>
         <colgroup>
-            <col style="width: 20%;">
-            <col style="width: 80%;">
+            <col style="width: 10%;">
+            <col style="width: 60%;">
+            <col style="width: 10%;">
         </colgroup>
         <tbody>
-        <tr>
-            <td>
-                <select id="typeSelect">
-                    <option value='svc' >SVC</option>
-                    <option value='imo' >IMO</option>
-                    <option value='wsvc' >WSVC</option>
-                    <option value='ido' >IDO</option>
-                    <option value='bcs' >BCS</option>
-                    <option value='cmo' >CMO</option>
-                </select>
 
-            </td>
+        <tr>
+            <td>SVC</td>
+            <td><select id="svcList" class="lists" useYn="true" style="display:inline;width:80%;">
+                <option th:each="detail, index : ${SVC_LIST}"
+                        th:value="${detail}"  th:text="${detail}"></option>
+            </select></td>
+            <td><button class='file_select_button' value='svc' id="selectSvcFile">선택</button></td>
+        </tr>
+        <tr>
+            <td>IMO</td>
             <td>
-                <select id="svcList" class="lists" useYn="true" style="display:inline;width:80%;">
-                    <option th:each="detail, index : ${SVC_LIST}"
-                            th:value="${detail}"  th:text="${detail}"></option>
-                </select>
-                <select id="imoList" class="lists" style="display:none;width:80%;">
+                <select id="imoList" class="lists" style="display:inline;width:80%;">
                     <option th:each="detail, index : ${IMO_LIST}"
                             th:value="${detail}"  th:text="${detail}"></option>
                 </select>
-                <select id="wsvcList" class="lists" style="display:none;width:80%;">
+            </td>
+            <td><button class='file_select_button' value='imo' id="selectImoFile">선택</button></td>
+        </tr>
+        <tr>
+            <td>WSVC</td>
+            <td>
+                <select id="wsvcList" class="lists" style="display:inline;width:80%;">
                     <option th:each="detail, index : ${WSVC_LIST}"
                             th:value="${detail}"  th:text="${detail}"></option>
                 </select>
-                <select id="idoList" class="lists" style="display:none;width:80%;">
+            </td>
+            <td><button class='file_select_button' value='wsvc' id="selectWsvcFile">선택</button></td>
+        </tr>
+        <tr>
+            <td>IDO</td>
+            <td>
+                <select id="idoList" class="lists" style="display:inline;width:80%;">
                     <option th:each="detail, index : ${IDO_LIST}"
                             th:value="${detail}"  th:text="${detail}"></option>
                 </select>
-                <select id="bcsList" class="lists" style="display:none;width:80%;">
+            </td>
+            <td><button class='file_select_button' value='ido' id="selectIdoFile">선택</button></td>
+        </tr>
+        <tr>
+            <td>BCS</td>
+            <td>
+                <select id="bcsList" class="lists" style="display:inline;width:80%;">
                     <option th:each="detail, index : ${BCS_LIST}"
                             th:value="${detail}"  th:text="${detail}"></option>
                 </select>
-                <button id="selectFile">선택</button>&nbsp;
+            </td>
+            <td><button class='file_select_button' value='bcs' id="selectBcsFile">선택</button></td>
+        </tr>
+        <tr>
+            <td>CMO</td>
+            <td>
+                <select id="cmoList" class="lists" style="display:inline;width:80%;">
+                    <option th:each="detail, index : ${CMO_LIST}"
+                            th:value="${detail}"  th:text="${detail}"></option>
+                </select>
+            </td>
+            <td><button class='file_select_button' value='cmo' id="selectCmoFile" >선택</button></td>
+        </tr>
+        <tr>
+
+            <td>
+
             </td>
 
         </tr>
 
-        <tr>
-            <td>현재 파일</td>
-            <td id="currentFile"></td>
-        </tr>
-        <tr>
-            <td>기능</td>
-            <td>데이터 생성 :
-                <button id="createTcpData">TCP데이터생성</button>&nbsp;
-                <button id="createJsonData">JSON데이터생성</button>&nbsp;
-                <button id="createTableByTcp">테이블생성(TCP데이터기반)</button>&nbsp;
-                <button id="createTableByJson">테이블생성(JSON데이터기반)</button>&nbsp;
-            </td>
-        </tr>
-        <tr>
-            <td>TCP 데이터</td>
-            <td><textarea id="tcpData" name="tcpData" style="width:100%;" rows="10"></textarea></td>
-        </tr>
-        <tr>
-            <td>JSON 데이터</td>
-            <td><textarea id="jsonData" name="jsonData" style="width:100%;" rows="10"></textarea></td>
-        </tr>
         </tbody>
 
     </table>

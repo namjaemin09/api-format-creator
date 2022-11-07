@@ -10,8 +10,8 @@ public enum LumpTypeEnum {
     IMO("imo"),
     IDO("ido"),
     CMO("cmo"),
-    WSVC("WSVC"),
-    BCS("BCS");
+    WSVC("wsvc"),
+    BCS("bcs");
 
     private String type;
 }
