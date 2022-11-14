@@ -21,8 +21,6 @@ public class AoaTargetService {
     final XPathUtil xPathUtil;
     final JexXmlFilerParser jexXmlFilerParser;
 
-
-
     public Lump getLumpFromFilePath(String Path){
         return null;
     }

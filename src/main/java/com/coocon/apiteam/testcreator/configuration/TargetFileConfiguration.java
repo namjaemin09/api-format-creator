@@ -1,5 +1,6 @@
 package com.coocon.apiteam.testcreator.configuration;
 
+import com.coocon.apiteam.testcreator.target.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -32,5 +33,27 @@ public class TargetFileConfiguration {
     private String cmoPath = "./target_sample/cmo/";
     private String wsvcPath = "./target_sample/wsvc/";
     private String bcsPath = "./target_sample/bcs/";
+
+
+    public String getFilePathByType(String type){
+        return getFilePathByType(LumpTypeEnum.valueOf(type));
+    }
+
+    public String getFilePathByType(LumpTypeEnum lumpTypeEnum){
+        switch (lumpTypeEnum){
+            case SVC:
+                return getSvcPath();
+            case IMO:
+                return getImoPath();
+            case IDO:
+                return getIdoPath();
+            case CMO:
+                return getCmoPath();
+            case WSVC:
+                return getWsvcPath();
+            default:
+                return null;
+        }
+    }
 
 }

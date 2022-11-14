@@ -20,10 +20,9 @@ public class Item {
     private String required;
     private String typeDat;
     private String target;
-    private String value;
     private String defaultValue;
-
     private String resourceId;
     private String packageId;
 
+    private String value;
 }

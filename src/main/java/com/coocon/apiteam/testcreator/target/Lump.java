@@ -8,4 +8,18 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 public class Lump extends AbstractLump {
+    @Override
+    boolean addInputRule(Item item) {
+        return false;
+    }
+
+    @Override
+    boolean addOutputRule(Item item) {
+        return false;
+    }
+
+    @Override
+    boolean addSubRule(Item item) {
+        return false;
+    }
 }

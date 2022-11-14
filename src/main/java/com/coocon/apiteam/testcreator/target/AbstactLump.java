@@ -14,7 +14,12 @@ import java.util.Map;
 abstract class AbstractLump {
     private String name;
 
-    private LinkedHashMap<String, AbstractLump> input_rules;
-    private LinkedHashMap<String, AbstractLump> output_rules;
-    private HashMap<String, AbstractLump> sub_rules;
+    private LinkedHashMap<String, Item> inputRules;
+    private LinkedHashMap<String, Item> outputRules;
+    private HashMap<String, AbstractLump> subRules;
+
+    abstract boolean addInputRule(Item item);
+    abstract boolean addOutputRule(Item item);
+    abstract boolean addSubRule(Item item);
+
 }
