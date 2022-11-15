@@ -102,12 +102,17 @@ public class JexXmlFilerParser {
         String name = namedNodeMap.getNamedItem("name").getNodeValue();
         String id = namedNodeMap.getNamedItem("id").getNodeValue();
         String fullChar = namedNodeMap.getNamedItem("fullChar").getNodeValue();
-        String typeDat = namedNodeMap.getNamedItem("typeDat").getNodeValue();
+        namedNodeMap.
+        namedNodeMap.getNamedItem("typeDat").getNodeValue();
         String align = namedNodeMap.getNamedItem("align").getNodeValue();
 
+        // item = Item.builder().
+        //        padding(padding).length(length).name(name).
+        //        id(id).fullChar(fullChar).typeDat(typeDat).align(align).build();
         Item item = Item.builder().
                 padding(padding).length(length).name(name).
-                id(id).fullChar(fullChar).typeDat(typeDat).align(align).build();
+                id(id).fullChar(fullChar).align(align).build();
+
         return item;
     }
 

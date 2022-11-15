@@ -4,7 +4,6 @@ import com.coocon.apiteam.testcreator.configuration.TargetFileConfiguration;
 import com.coocon.apiteam.testcreator.target.Lump;
 import com.coocon.apiteam.testcreator.util.XPathUtil;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.junit.jupiter.api.Assertions.*;
 

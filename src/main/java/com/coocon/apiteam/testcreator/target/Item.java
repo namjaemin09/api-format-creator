@@ -2,6 +2,7 @@ package com.coocon.apiteam.testcreator.target;
 
 import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.Nullable;
 
 import java.util.LinkedHashMap;
 
@@ -11,10 +12,10 @@ import java.util.LinkedHashMap;
 @NoArgsConstructor
 @Builder
 public class Item {
-    private String padding;
-    private String length;
     private String name;
     private String id;
+    private String padding;
+    private String length;
     private String fullChar;
     private String align;
     private String required;
@@ -24,5 +25,6 @@ public class Item {
     private String resourceId;
     private String packageId;
 
-    private String value;
+
+
 }
